@@ -7,6 +7,10 @@ let direction; // Direction of the snake
 let food = { x: Math.floor(Math.random() * 17 + 1) * box, y: Math.floor(Math.random() * 15 + 3) * box }; // Random food position
 
 document.addEventListener("keydown", directionControl);
+document.getElementById("up").addEventListener("click", () => (direction = "UP"));
+document.getElementById("down").addEventListener("click", () => (direction = "DOWN"));
+document.getElementById("left").addEventListener("click", () => (direction = "LEFT"));
+document.getElementById("right").addEventListener("click", () => (direction = "RIGHT"));
 
 function directionControl(event) {
     if (event.keyCode == 37 && direction != "RIGHT") {
